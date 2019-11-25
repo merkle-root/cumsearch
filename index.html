@@ -151,7 +151,11 @@
                                                 $("#loading").hide();
                                                 $("#searchbox").focus();
                                               },
-                              "pageLength":100
+                              "pageLength":100,
+                              "order": [[2, 'dec']],
+                              "columnDefs": [
+                                  { "orderable": false, "targets": [ 0, 2, 3, 4, 5 ] }
+                              ]
                             },
         custom_formatting: [[5, format_link]],
       });

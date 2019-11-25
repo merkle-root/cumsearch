@@ -1,4 +1,5 @@
 var CsvToHtmlTable = CsvToHtmlTable || {};
+var datatable;
 
 CsvToHtmlTable = {
     init: function (options) {
@@ -50,7 +51,12 @@ CsvToHtmlTable = {
                 }
                 $table.append($tableBody);
 
-                var datatable = $table.DataTable(datatables_options);
+                datatable = $table.DataTable(datatables_options);
+                
+
+      datatable.order( [ 2, 'asc' ] ).draw();
+      datatable.order( [ 1, 'asc' ] ).draw();
+                
                 $("#searchbox").on("keyup search input paste cut", function() {
                 datatable.search(this.value).draw();
                 });  
