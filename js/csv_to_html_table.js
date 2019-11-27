@@ -53,9 +53,8 @@ CsvToHtmlTable = {
 
                 datatable = $table.DataTable(datatables_options);
                 
-
-      datatable.order( [ 2, 'asc' ] ).draw();
-      datatable.order( [ 1, 'asc' ] ).draw();
+                datatable.order( [ 2, 'asc' ] ).draw();
+                datatable.order( [ 1, 'asc' ] ).draw();
                 
                 $("#searchbox").on("keyup search input paste cut", function() {
                 datatable.search(this.value).draw();
