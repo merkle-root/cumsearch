@@ -1,6 +1,6 @@
 import csv
 
-print("Remember to delete the final 'END' entries before running this")
+print("Remember to delete the final 'END' entries before running this. Also the column titles in the raw premium file.")
 
 with open("raw_regular.csv") as in_file:
     with open("combined.csv", 'w') as out_file:
